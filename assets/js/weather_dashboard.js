@@ -1,28 +1,7 @@
 $(document).ready(function(){
 
-  // $(".searchBtn").val
-
   
-  // var apiKey = "92082348e1fdf20edfb9752ebc60f8bc"
-
-  // var requestUrl ='https://api.openweathermap.org/data/2.5/weather?q=boston&appid='+ apiKey;
-
-  // var responseText = $('.state-results');
-  
-  // function getApi(requestUrl) {
-  //   fetch(requestUrl)
-  //     .then(function (data) {
-  //       console.log(data);
-  //       // if (response.status === 200) {
-  //       //   // responseText.textContent = 
-  //       // }
-  //       return response.json();
-  //   });
-  // }
-  
-  // getApi(requestUrl);
-  
-    
+  function getCurrentWeather(){
    
   var apiKey = "92082348e1fdf20edfb9752ebc60f8bc"
 
@@ -34,9 +13,19 @@ $(document).ready(function(){
   })
   .then(function (data) {
     console.log(data);
+     $(".todaysDate").text(data.name);
+     $(".weatherIconCurrent").text(data.weather.icon); 
+     $(".temperatureCurrent").text(data.main.temp);
+     $(".humidityCurrent").text(data.main.humidity);
+     $(".uvIndexCurrent").text(data.name);
+     $(".windSpeedCurrent").text(data.wind.speed);
+
+
+
   });
     
-    //API Current weather api call 
+}
+    getCurrentWeather()
     
     
     
