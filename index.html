@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather-dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -28,6 +33,16 @@
               <button class="btn btn-primary searchBtn" type="button"><i class="fas fa-search"></i></button>
                 </div>
               </div>
+              <ol id="selectable">
+                <li class="ui-widget-content">Item 1</li>
+                <li class="ui-widget-content">Item 2</li>
+                <li class="ui-widget-content">Item 3</li>
+                <li class="ui-widget-content">Item 4</li>
+                <li class="ui-widget-content">Item 5</li>
+                <li class="ui-widget-content">Item 6</li>
+                <li class="ui-widget-content">Item 7</li>
+              </ol>
+               
         </div>
         <div class="col-8">
              <div> 
@@ -54,16 +69,18 @@
                     <div class="card">
                       <img class="card-img-top" src="..." alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title 2-day-time"></h5>
+                        <p class="card-text 2-day-temp"></p>
+                        <p class="card-text 2-day-humidity"></p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                       </div>
                     </div>
                     <div class="card">
                       <img class="card-img-top" src="..." alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <h5 class="card-title 3-day-time"></h5>
+                        <p class="card-text 3-day-temp"></p>
+                        <p class="card-text 3-day-humidity"></p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                       </div>
                       
@@ -71,16 +88,18 @@
                     <div class="card">
                         <img class="card-img-top" src="..." alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                          <h5 class="card-title 4-day-time"></h5>
+                        <p class="card-text 4-day-temp"></p>
+                        <p class="card-text 4-day-humidity"></p>
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                       </div>
                       <div class="card">
                         <img class="card-img-top" src="..." alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                          <<h5 class="card-title 5-day-time"></h5>
+                          <p class="card-text 5-day-temp"></p>
+                          <p class="card-text 5-day-humidity"></p>
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                       </div>
@@ -92,10 +111,12 @@
 
     </main>
     
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/js/weather_dashboard.js"></script>
 </body>
 </html>
