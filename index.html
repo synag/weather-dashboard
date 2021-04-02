@@ -10,9 +10,8 @@
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
-  />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    crossorigin="anonymous"/>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -34,7 +33,7 @@
                 </div>
               </div>
               <ol id="selectable">
-                <li class="ui-widget-content">Item 1</li>
+                <li class="ui-widget-content search1"></li>
                 <li class="ui-widget-content">Item 2</li>
                 <li class="ui-widget-content">Item 3</li>
                 <li class="ui-widget-content">Item 4</li>
@@ -47,7 +46,7 @@
         <div class="col-8">
              <div> 
                  <div class="col-12 results">
-                    <h2 class="state-results"></h2><span class="todaysDate"><span class="weatherIconCurrent"></span></span>
+                  <h2 class="state-results"></h2><h2 class="todaysdate"></h2><img class="currentWeatherIcon" src="" alt="">
                  <p class="temperatureCurrent"></p>
                  <p class="humidityCurrent"></p>
                  <p class="windSpeedCurrent"></p>
@@ -56,29 +55,30 @@
            </div>
 
             <div class="col-12 five-day-results">
+              <h2>5-Day Forecast:</h2>
                 <div class="card-deck">
                     <div class="card">
-                      <img class="card-img-top" src="..." alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title 1-day-time"></h5>
+                        <img class="card-img-top icon1" src="..." alt="Card image cap">
                         <p class="card-text 1-day-temp"></p>
                         <p class="card-text 1-day-humidity"></p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                       </div>
                     </div>
                     <div class="card">
-                      <img class="card-img-top" src="..." alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title 2-day-time"></h5>
+                        <img class="card-img-top icon2" src="..." alt="Card image cap">
                         <p class="card-text 2-day-temp"></p>
                         <p class="card-text 2-day-humidity"></p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                       </div>
                     </div>
                     <div class="card">
-                      <img class="card-img-top" src="..." alt="Card image cap">
                       <div class="card-body">
                         <h5 class="card-title 3-day-time"></h5>
+                        <img class="card-img-top icon3" src="..." alt="Card image cap">
                         <p class="card-text 3-day-temp"></p>
                         <p class="card-text 3-day-humidity"></p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -86,18 +86,18 @@
                       
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="..." alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title 4-day-time"></h5>
+                          <img class="card-img-top icon4" src="..." alt="Card image cap">
                         <p class="card-text 4-day-temp"></p>
                         <p class="card-text 4-day-humidity"></p>
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                       </div>
                       <div class="card">
-                        <img class="card-img-top" src="..." alt="Card image cap">
                         <div class="card-body">
-                          <<h5 class="card-title 5-day-time"></h5>
+                          <h5 class="card-title 5-day-time"></h5>
+                          <img class="card-img-top icon5" src="..." alt="Card image cap">
                           <p class="card-text 5-day-temp"></p>
                           <p class="card-text 5-day-humidity"></p>
                           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
@@ -115,8 +115,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <script src="./assets/js/weather_dashboard.js"></script>
 </body>
 </html>
