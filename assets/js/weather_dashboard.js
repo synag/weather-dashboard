@@ -124,9 +124,9 @@ function getItem(){
 
   for (var i = 0; i < localStorage.length; i++) {
     // var text = localStorage.getItem("planner-text-" + (i + 9));
-    var text = localStorage.getItem("search-result-"[i]);
+    var text = localStorage.getItem("search-result-"+[i]);
     // $("#h" + (i + 9)).val(text);
-    $(".search1").val(text);
+    $(".search1").text(text);
   }
 }  
 
