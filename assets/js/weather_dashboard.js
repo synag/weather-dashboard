@@ -127,24 +127,30 @@ function getItem(){
     var text = localStorage.getItem("search-result-"+[i]);
    $("#selectable").append("<h2 class=storageList>"+text +" </h2>")
 
-    $(".search1").text(text);
   }
 }  
 
 
 $(".searchBtn").click(function(event){
   event.preventDefault();
-  // action goes here!!
   city = $(".form-control").val();
  getCurrentWeather()
  fiveDayForecast()
  setItem()
+ getItem()
 
 });
+
 getItem()
-// $( function() {
-//   $( "#selectable" ).selectable();
-// });
+
+$(".storageList").click(function(event){
+  event.preventDefault();
+ city= event.target.textContent;
+ getCurrentWeather()
+ fiveDayForecast()
+});
+
+
 
 
 
