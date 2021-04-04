@@ -125,7 +125,8 @@ function getItem(){
   for (var i = 0; i < localStorage.length; i++) {
     // var text = localStorage.getItem("planner-text-" + (i + 9));
     var text = localStorage.getItem("search-result-"+[i]);
-    // $("#h" + (i + 9)).val(text);
+   $("#selectable").append("<h2 class=storageList>"+text +" </h2>")
+
     $(".search1").text(text);
   }
 }  
@@ -138,9 +139,9 @@ $(".searchBtn").click(function(event){
  getCurrentWeather()
  fiveDayForecast()
  setItem()
- getItem()
-});
 
+});
+getItem()
 // $( function() {
 //   $( "#selectable" ).selectable();
 // });
