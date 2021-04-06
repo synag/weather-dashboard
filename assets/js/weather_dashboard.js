@@ -24,7 +24,6 @@ $(document).ready(function(){
      $(".weatherIconCurrent").text(data.weather.icon); 
      $(".temperatureCurrent").text("Temperature: " +data.main.temp +"");
      $(".humidityCurrent").text("Humidity: "+data.main.humidity+"%");
-     $(".uvIndexCurrent").text(data.name);
      $(".windSpeedCurrent").text("Wind Speed: "+data.wind.speed+" MPH");
      lat = data.coord.lat
      long = data.coord.lon
@@ -38,10 +37,9 @@ $(document).ready(function(){
     
 }  
 
-//UV function to get the UV infomration
 function uvData(){
 
-  var requestUrl ='https://api.openweathermap.org/data/2.5/onecall?lat='+ lat+ 'lon='+long+'&exclude=hourly,daily,minutely&appid=' +apiKey;
+  var requestUrl ='https://api.openweathermap.org/data/2.5/onecall?lat='+ lat+ '&lon='+long+'&exclude=daily,minutely&appid=' +apiKey;
     
   fetch(requestUrl)
 .then(function (response) {
@@ -49,9 +47,12 @@ function uvData(){
 })
 .then(function (data) {
   console.log(data);
+  var uvi = data.current.uvi
+  $(".uvIndexCurrent").text("UV Index: ")
+  $(".uvData").text(uvi)
+  console.log(uvi)
  
-  //  $(".uvIndexCurrent").text(data.name);
-  //  $(".windSpeedCurrent").text("Wind Speed: "+data.wind.speed+" MPH");
+
 
 })
 }
@@ -135,6 +136,7 @@ $(".searchBtn").click(function(event){
   event.preventDefault();
   city = $(".form-control").val();
  getCurrentWeather()
+ uvData()
  fiveDayForecast()
  setItem()
  getItem()
@@ -148,6 +150,7 @@ $(".storageList").click(function(event){
  city= event.target.textContent;
  getCurrentWeather()
  fiveDayForecast()
+ uvData()
 });
 
 
