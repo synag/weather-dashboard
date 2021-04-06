@@ -47,12 +47,25 @@ function uvData(){
 })
 .then(function (data) {
   console.log(data);
-  var uvi = data.current.uvi
-  $(".uvIndexCurrent").text("UV Index: ")
-  $(".uvData").text(uvi)
-  console.log(uvi)
- 
+  var uvi = data.current.uvi;
+  $(".uvIndexCurrent").text("UV Index: ");
+  $("#uvData").text(uvi);
+ if (uvi<=2.9) {
+  $("#uvData").attr("class","greenUVI");
+ }
+ else if(uvi>=3&&uvi<=5.9){
+  $("#uvData").attr("class","yellowUVI");
+ }
 
+ else if(uvi>=6&&uvi<=7.9){
+  $("#uvData").attr("class","orangeUVI");
+ }
+ else if(uvi>=8&&uvi<=10){
+  $("#uvData").attr("class","redUVI");
+ }
+ else{
+  $("#uvData").attr("class","purpleUVI");
+ }
 
 })
 }

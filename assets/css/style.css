@@ -38,7 +38,10 @@ Main{
 }
 
 
-.temperatureCurrent,.humidityCurrent,.windSpeedCurrent,.uvIndexCurrent,.uvData{
+.temperatureCurrent,.humidityCurrent,.windSpeedCurrent,.uvIndexCurrent{
+    font-size:2em;
+}
+#uvData{ 
     font-size:2em;
 }
 .uvIndexCurrent{
