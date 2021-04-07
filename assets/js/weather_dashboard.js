@@ -153,9 +153,7 @@ $(document).ready(function () {
   }
 
   function getItem() {
-    localStorage.removeItem("pb_user_activity");
-    localStorage.removeItem("pb_forms");
-    localStorage.removeItem("pb_exceptions");
+    
     for (var i = 1; i <= localStorage.length; i++) {
       var text = localStorage.getItem("search-result-" + [i]);
       $("#selectable").append("<h2 class=storageList>" + text + " </h2>");
