@@ -1,116 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather-dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"/>
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <header>
-        <div class="jumbotron jumbotron-fluid bg-dark">
-            <div class="container">
-              <h1 class="display-4 text">Weather Dashboard</h1>
-            </div>
-          </div>
+      <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container">
+          <h1 class="display-4 text">Weather Dashboard</h1>
+        </div>
+      </div>
     </header>
     <main>
-        <div class="row">
+      <div class="row">
         <div class="col-4 card-one">
-            <h2>Search for a City</h2>
-            <div class="input-group mb-3">
-             <input type="text" class="form-control" placeholder="search" aria-label="Recipient's username" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-              <button class="btn btn-primary searchBtn" type="button"><i class="fas fa-search"></i></button>
-                </div>
-              </div>
-              <ol id="selectable">
-              
-              </ol>
-               
+          <h2>Search for a City</h2>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="search"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary searchBtn" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div id="selectable"></div>
         </div>
         <div class="col-8">
-             <div> 
-                 <div class="col-12 results">
-                  <h2 class="state-results"></h2><h2 class="todaysdate"></h2><img class="currentWeatherIcon" src="" alt="">
-                 <p class="temperatureCurrent"></p>
-                 <p class="humidityCurrent"></p>
-                 <p class="windSpeedCurrent"></p>
-                 <p class="uvIndexCurrent"></p><span id="uvData"></span>
-              </div> 
-           </div>
-
-            <div class="col-12 five-day-results">
-              <h2>5-Day Forecast:</h2>
-                <div class="card-deck">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title 1-day-time"></h5>
-                        <img class="card-img-top icon1" src="..." alt="Card image cap">
-                        <p class="card-text 1-day-temp"></p>
-                        <p class="card-text 1-day-humidity"></p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title 2-day-time"></h5>
-                        <img class="card-img-top icon2" src="..." alt="Card image cap">
-                        <p class="card-text 2-day-temp"></p>
-                        <p class="card-text 2-day-humidity"></p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title 3-day-time"></h5>
-                        <img class="card-img-top icon3" src="..." alt="Card image cap">
-                        <p class="card-text 3-day-temp"></p>
-                        <p class="card-text 3-day-humidity"></p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                      
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title 4-day-time"></h5>
-                          <img class="card-img-top icon4" src="..." alt="Card image cap">
-                        <p class="card-text 4-day-temp"></p>
-                        <p class="card-text 4-day-humidity"></p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title 5-day-time"></h5>
-                          <img class="card-img-top icon5" src="..." alt="Card image cap">
-                          <p class="card-text 5-day-temp"></p>
-                          <p class="card-text 5-day-humidity"></p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                  </div>
+          <div class="currentDisplay">
+            <div class="col-12 results">
+              <div>
+                <h2 class="state-results"></h2>
+                <h2 class="todaysdate"></h2>
+                <img class="currentWeatherIcon" src="" alt="" />
+              </div>
+              <p class="temperatureCurrent"></p>
+              <p class="humidityCurrent"></p>
+              <p class="windSpeedCurrent"></p>
+              <p class="uvIndexCurrent"></p>
+              <span id="uvData"></span>
             </div>
-        </div>
-        </div>
+          </div>
 
-
+          <div class="col-12 five-day-results">
+            <h2>5-Day Forecast:</h2>
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title 1-day-time"></h5>
+                  <img class="card-img-top icon1" src="..." />
+                  <p class="card-text 1-day-temp"></p>
+                  <p class="card-text 1-day-humidity"></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title 2-day-time"></h5>
+                  <img class="card-img-top icon2" src="..." />
+                  <p class="card-text 2-day-temp"></p>
+                  <p class="card-text 2-day-humidity"></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title 3-day-time"></h5>
+                  <img class="card-img-top icon3" src="..." />
+                  <p class="card-text 3-day-temp"></p>
+                  <p class="card-text 3-day-humidity"></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title 4-day-time"></h5>
+                  <img class="card-img-top icon4" src="..." />
+                  <p class="card-text 4-day-temp"></p>
+                  <p class="card-text 4-day-humidity"></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title 5-day-time"></h5>
+                  <img class="card-img-top icon5" src="..." />
+                  <p class="card-text 5-day-temp"></p>
+                  <p class="card-text 5-day-humidity"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/weather_dashboard.js"></script>
-</body>
+  </body>
 </html>
