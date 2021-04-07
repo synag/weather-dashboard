@@ -17,7 +17,6 @@ $(document).ready(function () {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         $(".state-results").text(data.name);
         $(".weatherIconCurrent").text(data.weather.icon);
         $(".temperatureCurrent").text("Temperature: " + data.main.temp + " ");
@@ -50,7 +49,6 @@ $(document).ready(function () {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         var uvi = data.current.uvi;
         $(".uvIndexCurrent").text("UV Index: ");
         $("#uvData").text(uvi);
@@ -82,7 +80,6 @@ $(document).ready(function () {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         var reformatDate1 = data.list[5].dt_txt;
         var reformatDate2 = data.list[13].dt_txt;
         var reformatDate3 = data.list[21].dt_txt;
