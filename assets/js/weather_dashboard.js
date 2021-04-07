@@ -156,7 +156,8 @@ $(document).ready(function () {
   }
 
   function getItem() {
-    for (var i = 1; i <= localStorage.length; i++) {
+    for (var i = 1; i <= localStorage.length-3; i++) {
+      if(text!==storage.key())
       var text = localStorage.getItem("search-result-" + [i]);
       $("#selectable").append("<h2 class=storageList>" + text + " </h2>");
     }
