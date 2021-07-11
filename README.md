@@ -11,9 +11,9 @@ There are no specific installation instructions. However, below is minor usage i
 2) Current weather for the selected city, along with its five-day forecast, will appear on the page
 3) City is stored in local storage and persists on the page after page refresh.
 
-Below is the URL to the webpage. 
+Below is the URL to the webpage and github repository. 
 
-URL: https://synag.github.io/weather-dashboard/
+Website URL: https://synag.github.io/weather-dashboard/
 
 Github repository: https://github.com/synag/weather-dashboard
 
@@ -30,6 +30,7 @@ Minimum usage requirements.
 Below is the weekly planner screenshot, the image shows the web application's appearance and functionality:
 
 ![weather-dashboard](./assets/image/screenshot.png)
+![weather-dashboard](./assets/image/screenshot2.png)
 
 
 ## Credits
